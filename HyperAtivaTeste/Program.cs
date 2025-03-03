@@ -6,7 +6,6 @@ using HyperAtivaTeste.Infra.Repository;
 using HyperAtivaTeste.Infra.Services;
 using HyperAtivaTeste.Infra;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -90,11 +89,13 @@ builder.Services.AddScoped<IUserApiService, UserApiService>();
 builder.Services.AddScoped<ICreditCardApiService, CreditCardApiService>();
 builder.Services.AddScoped<IAuthorizationApiService, AuthorizationApiService>();
 builder.Services.AddScoped<ILogApiService, LogApiService>();
+builder.Services.AddScoped<ILinkedInCSharpApiService, LinkedInCSharpApiService>();
 
 builder.Services.AddScoped<ICreditCardService, CreditCardService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthorizationService, AuthorizationService>();
 builder.Services.AddScoped<ILogService, LogService>();
+builder.Services.AddScoped<ILinkedInCSharpService, LinkedInCSharpService>();
 
 builder.Services.AddScoped<ICreditCardRepository, CreditCardRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
